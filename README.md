@@ -9,7 +9,7 @@ The dataset consists of force-time-distance measurements across multiple Excel s
 - Force (N): Applied force on the sample
 - Time (s): Time progression of the compression test
 - Distance (mm): Compression distance
-
+  
 ![Data](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 # Executive Summary
@@ -25,13 +25,16 @@ This code helps to extract key TPA attributes (Hardness, Cohesiveness, Springine
 
 - Identify key timestamps for calculations (t1_start, t1_end, t2_start, t2_end)
 
-![Cleaning](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![TPA_1](https://github.com/user-attachments/assets/df8db66f-9772-48e3-ba4d-3be2acaf2bb0)
+![TPA_2](https://github.com/user-attachments/assets/6f3f7f37-d051-401e-8a60-0217082bd6ce)
+![TPA_3](https://github.com/user-attachments/assets/8072072c-11a8-4692-ac16-ff3ebd2c2557)
 
 ## TPA calculation:
+Here is the code for calculating the different TPA metrics:<br/>
+![Calculation](https://github.com/user-attachments/assets/4cd39015-f05f-4e86-b657-b13a21a29a80)
+
 #### Hardness
 - Maximum force (peak) exerted during first compression 
-
-![Hardness](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 #### Cohesiveness
 - Ratio of energy (area under the curve) between the second and first compression cycles:
@@ -42,8 +45,6 @@ Where:
 - Area_1 = Area under the force-time curve for the first compression.
 - Area_2 = Area under the force-time curve for the second compression.
 
-![Cohesiveness](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 #### Springiness
 - Time ratio between the two peak forces to indicate sample recovery:
 
@@ -52,8 +53,6 @@ $$ Springiness = {T2~max - T2~start \over T1~max - T1~start} $$
 Where:
 - T1_max = Time of peak force in first compression.
 - T2_max = Time of peak force in second compression
-
-![Springiness](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 # Recommendations
 - Formulations with low cohesiveness may require hydrocolloid adjustments to improve gel strength
